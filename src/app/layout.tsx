@@ -23,6 +23,7 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
           rel="stylesheet"
         />
+        <title>Frontend Engineer — Website</title>
       </head>
       <body>
         <Header />

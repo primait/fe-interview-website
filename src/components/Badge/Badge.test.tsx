@@ -2,6 +2,7 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, it, vi } from "vitest";
 import { Badge, type BadgeProps } from "./Badge";
+import styles from "./Badge.module.css";
 
 describe("Badge", () => {
   describe("as badge (default)", () => {
@@ -19,7 +20,7 @@ describe("Badge", () => {
       const { container } = render(<Badge variant="editor" size="s" />);
 
       const badge = container.querySelector("span");
-      expect(badge).toHaveClass("badge", "badge--editor", "badge--s");
+      expect(badge).toHaveClass(styles.badge, styles["badge--editor"], styles["badge--s"]);
     });
 
     it("does not respond to clicks", async () => {
@@ -126,13 +127,13 @@ describe("Badge", () => {
     it("applies small size class", () => {
       const { container } = render(<Badge size="s" />);
       const badge = container.querySelector("span");
-      expect(badge).toHaveClass("badge--s");
+      expect(badge).toHaveClass(styles["badge--s"]);
     });
 
     it("applies medium size class", () => {
       const { container } = render(<Badge size="m" />);
       const badge = container.querySelector("span");
-      expect(badge).toHaveClass("badge--m");
+      expect(badge).toHaveClass(styles["badge--m"]);
     });
   });
 

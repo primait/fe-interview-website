@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 import { FiltersBar } from "./FiltersBar";
+import styles from "./FiltersBar.module.css";
 
 describe("FiltersBar", () => {
   it("renders with label", () => {
@@ -32,7 +33,7 @@ describe("FiltersBar", () => {
       </FiltersBar>,
     );
 
-    const filtersBar = container.querySelector(".chip-group");
+    const filtersBar = container.querySelector(`.${styles["filters-bar"]}`);
     expect(filtersBar).toHaveClass("custom-class");
   });
 
@@ -76,8 +77,8 @@ describe("FiltersBar", () => {
       </FiltersBar>,
     );
 
-    expect(container.querySelector(".chip-group__label")).toBeInTheDocument();
-    expect(container.querySelector(".chip-group__items")).toBeInTheDocument();
+    expect(container.querySelector(`.${styles["filters-bar__label"]}`)).toBeInTheDocument();
+    expect(container.querySelector(`.${styles["filters-bar__filters"]}`)).toBeInTheDocument();
   });
 
   it("renders multiple children correctly", () => {
