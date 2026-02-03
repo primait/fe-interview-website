@@ -1,0 +1,34 @@
+.button {
+  background-color: var(--color-brand);
+  color: var(--color-content-on-brand);
+  height: 3rem;
+  padding: 0 1.5rem;
+  border-radius: 2rem;
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-l);
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: var(--color-brand-hover);
+  }
+
+  &:active {
+    background-color: var(--color-brand-active);
+  }
+
+  &:focus-visible {
+    outline: 0.125rem solid var(--color-action);
+    outline-offset: 0.125rem;
+  }
+
+  &:disabled {
+    background-color: var(--color-disabled);
+    cursor: not-allowed;
+  }
+
+  @media (min-width: 768px) {
+    height: 4rem;
+    padding: 0 2rem;
+    font-size: var(--font-size-xl);
+  }
+}

@@ -1,6 +1,7 @@
 "use client";
 
 import type { ButtonHTMLAttributes } from "react";
+import styles from "./Button.module.css";
 
 /**
  * Props for the Button component
@@ -12,5 +13,5 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {}
  * Simple button component that wraps native HTML button element
  */
 export const Button = ({ type = "button", ...props }: ButtonProps) => (
-  <button type={type} {...props} />
+  <button className={styles.button} type={type} {...props} />
 );
