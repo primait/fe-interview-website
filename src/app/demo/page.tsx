@@ -19,7 +19,7 @@ export default function ComponentsDemo() {
   };
 
   return (
-    <main style={{ padding: "2rem", maxWidth: "800px", margin: "0 auto" }}>
+    <main>
       <h1>Components Demo</h1>
 
       <section style={{ marginBottom: "2rem" }}>
@@ -36,8 +36,8 @@ export default function ComponentsDemo() {
       <section style={{ marginBottom: "2rem" }}>
         <h2>Badges</h2>
         <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-          <Badge variant="admin" onSelectionChange={() => {}} />
-          <Badge variant="editor" onSelectionChange={() => {}} />
+          <Badge variant="admin" onSelectionChange={() => {}} size={"s"} />
+          <Badge variant="editor" onSelectionChange={() => {}} size={"s"} />
           <Badge variant="viewer" onSelectionChange={() => {}} />
           <Badge variant="guest" onSelectionChange={() => {}} />
         </div>
@@ -50,25 +50,25 @@ export default function ComponentsDemo() {
             as="filter"
             variant="admin"
             isSelected={selectedBadge === "admin"}
-            onSelectionChange={(selected) => handleBadgeChange("admin", selected)}
+            onSelectionChange={(selected: boolean) => handleBadgeChange("admin", selected)}
           />
           <Badge
             as="filter"
             variant="editor"
             isSelected={selectedBadge === "editor"}
-            onSelectionChange={(selected) => handleBadgeChange("editor", selected)}
+            onSelectionChange={(selected: boolean) => handleBadgeChange("editor", selected)}
           />
           <Badge
             as="filter"
             variant="viewer"
             isSelected={selectedBadge === "viewer"}
-            onSelectionChange={(selected) => handleBadgeChange("viewer", selected)}
+            onSelectionChange={(selected: boolean) => handleBadgeChange("viewer", selected)}
           />
           <Badge
             as="filter"
             variant="guest"
             isSelected={selectedBadge === "guest"}
-            onSelectionChange={(selected) => handleBadgeChange("guest", selected)}
+            onSelectionChange={(selected: boolean) => handleBadgeChange("guest", selected)}
           />
         </FiltersBar>
       </section>

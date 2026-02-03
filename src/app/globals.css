@@ -1,0 +1,60 @@
+:root {
+  /* Color Palette */
+  --color-brand: #aee47a;
+  --color-brand-hover: #80e142;
+  --color-brand-active: #65cf21;
+  --color-disabled: #e2e2e1;
+  --color-action: #1e4b2a;
+  --color-outline: #e2e2e1;
+  --color-content: #0e0f0c;
+  --color-content-on-brand: #1e4b2a;
+  --color-content-weak: #a1a49d;
+  --color-pink: #fadaee;
+  --color-orange: #f7c296;
+  --color-lilla: #8f98d5;
+  --color-surface: #ffffff;
+
+  /* Fonts */
+  --font-sans: var(--font-sans);
+  --font-weight-normal: 400;
+  --font-weight-medium: 600;
+  --font-weight-bold: 700;
+  --font-size-m: 1rem;
+  --font-size-l: 1.5rem;
+  --font-size-xl: 2rem;
+
+  /* Spacing */
+  --spacing-s: 0.5rem;
+  --spacing-m: 1rem;
+  --spacing-l: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-xxl: 2.5rem;
+}
+
+html,
+body {
+  font-family:
+    var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    sans-serif;
+}
+
+/* Screen reader only content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+main {
+  padding: 0 1.25rem;
+
+  @media (min-width: 768px) {
+    padding: 0 15rem;
+  }
+}
