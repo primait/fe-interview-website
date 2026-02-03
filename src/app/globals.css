@@ -34,7 +34,7 @@
 html,
 body {
   font-family:
-    var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    "Google Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
     sans-serif;
 }
 
@@ -55,6 +55,10 @@ main {
   padding: 0 1.25rem;
 
   @media (min-width: 768px) {
+    padding: 0 10rem;
+  }
+
+  @media (min-width: 1200px) {
     padding: 0 15rem;
   }
 }
