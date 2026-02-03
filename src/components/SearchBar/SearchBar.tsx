@@ -2,6 +2,7 @@
 
 import { type FormEvent, type KeyboardEvent, useId } from "react";
 import { Button } from "../Button/Button";
+import styles from "./SearchBar.module.css";
 
 export interface SearchBarProps {
   /**
@@ -60,8 +61,8 @@ export const SearchBar = ({
   };
 
   return (
-    <search className="search-bar">
-      <form onSubmit={handleSubmit}>
+    <search className={"search-bar"}>
+      <form onSubmit={handleSubmit} className={styles["search-bar__form"]}>
         <label className={"sr-only"} htmlFor={id}>
           {label}
         </label>
@@ -73,7 +74,7 @@ export const SearchBar = ({
           onKeyDown={handleKeyDown}
           placeholder={placeholder}
           disabled={disabled}
-          className="search-bar__input"
+          className={styles["search-bar__input"]}
         />
         <Button type="submit" disabled={disabled}>
           {buttonLabel}
