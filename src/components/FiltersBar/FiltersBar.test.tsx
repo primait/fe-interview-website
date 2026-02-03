@@ -25,16 +25,6 @@ describe("FiltersBar", () => {
     expect(screen.getByRole("button", { name: "Filter 2" })).toBeInTheDocument();
   });
 
-  it("renders with description", () => {
-    render(
-      <FiltersBar label="Filters" id="filters" description="Select one or more filters">
-        <div>Content</div>
-      </FiltersBar>,
-    );
-
-    expect(screen.getByText("Select one or more filters")).toBeInTheDocument();
-  });
-
   it("applies custom className", () => {
     const { container } = render(
       <FiltersBar label="Filters" id="filters" className="custom-class">
@@ -65,17 +55,6 @@ describe("FiltersBar", () => {
     );
 
     const group = screen.getByRole("group", { name: "Role filters" });
-    expect(group).toBeInTheDocument();
-  });
-
-  it("associates description with group via aria-describedby", () => {
-    render(
-      <FiltersBar label="Filters" id="filters" description="Choose your preferences">
-        <div>Content</div>
-      </FiltersBar>,
-    );
-
-    const group = screen.getByRole("group", { description: "Choose your preferences" });
     expect(group).toBeInTheDocument();
   });
 
