@@ -1,0 +1,43 @@
+.badge {
+  display: inline-grid;
+  border-radius: 1.25rem;
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-medium);
+  place-content: center;
+
+  &:focus-visible {
+    outline: 0.125rem solid var(--color-action);
+    outline-offset: 0.125rem;
+  }
+
+  &[aria-pressed="false"] {
+    background-color: var(--color-outline);
+    color: var(--color-content);
+  }
+}
+
+.badge--s {
+  height: 2rem;
+  padding: 0 var(--spacing-s);
+}
+
+.badge--m {
+  height: 2.5rem;
+  padding: 0 var(--spacing-m);
+}
+
+.badge--admin {
+  background-color: var(--color-brand);
+}
+
+.badge--editor {
+  background-color: var(--color-pink);
+}
+
+.badge--viewer {
+  background-color: var(--color-orange);
+}
+
+.badge--guest {
+  background-color: var(--color-lilla);
+}

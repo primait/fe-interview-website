@@ -1,6 +1,6 @@
 "use client";
 
-import classNames from "classnames";
+import styles from "./Badge.module.css";
 
 type BadgeVariant = "admin" | "editor" | "viewer" | "guest";
 type BadgeSize = "s" | "m";
@@ -49,7 +49,7 @@ export const Badge = ({
 }: BadgeProps) => {
   const isButton = as === "filter";
   const Component = isButton ? "button" : "span";
-  const className = classNames("badge", `badge--${variant}`, `badge--${size}`);
+  const className = [styles.badge, styles[`badge--${variant}`], styles[`badge--${size}`]].join(" ");
   const badgeLabel = variant.charAt(0).toUpperCase() + variant.slice(1);
 
   return (
