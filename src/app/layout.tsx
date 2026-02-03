@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Google_Sans } from "next/font/google";
+import "./reset.css";
 import "./globals.css";
 import type { ReactNode } from "react";
 import { Header } from "@/components/Header/Header";
