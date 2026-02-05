@@ -63,7 +63,24 @@ src/
 │   └── SearchBar/
 ├── utils/              # Utility functions
 │   └── utils.ts
+├── data/               # Mock data
+│   └── mockDataset.json
 └── setupTests.ts       # Test setup
+```
+
+## Mock Dataset
+
+The project includes a mock dataset located at `src/data/mockDataset.json` containing 30 user records with the following structure:
+
+```typescript
+{
+  id: number;
+  name: string;
+  surname: string;
+  role: string;              // "Software Engineer" | "Product Designer" | "Product Manager"
+  dashboard_role: string;    // "Admin" | "Editor" | "Viewer" | "Guest"
+  team: string;              // "Website" | "Marketing" | "Finance" | "Security"
+}
 ```
 
 ## Testing
