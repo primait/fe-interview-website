@@ -26,11 +26,14 @@ pnpm test
 # Run tests in watch mode
 pnpm test:watch
 
-# Check code quality
+# Check code quality (using Biome)
 pnpm check
 
-# Fix code issues
+# Fix code issues (using Biome)
 pnpm check:fix
+
+# Type check (TypeScript)
+pnpm tsc
 
 # Build for production
 pnpm build
@@ -48,13 +51,18 @@ src/
 ├── app/                 # Next.js App Router
 │   ├── layout.tsx      # Root layout
 │   ├── page.tsx        # Home page
-│   └── globals.css     # Global styles
+│   ├── not-found.tsx   # 404 page
+│   ├── page.module.css # Page styles
+│   ├── globals.css     # Global styles
+│   └── reset.css       # CSS reset
 ├── components/         # React components
 │   ├── Badge/
 │   ├── Button/
 │   ├── FiltersBar/
 │   ├── Header/
 │   └── SearchBar/
+├── utils/              # Utility functions
+│   └── utils.ts
 └── setupTests.ts       # Test setup
 ```
 
@@ -64,4 +72,4 @@ This project uses Vitest with React Testing Library. Tests are located next to t
 
 ## Figma file
 
-The Figma file for the home test is available [here](https://www.figma.com/design/ESP3mNtKRj1aI458c08QBb/%F0%9F%92%BB-Website-Home-Test?node-id=0-1&t=tmrCaYq4wADJCHvD-1).
+The Figma file for the home test is available [here](https://www.figma.com/design/8fECtktTTsyIWSOJcjcLao/Senior-Frontend-Software-Engineer---Website).

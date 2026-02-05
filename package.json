@@ -6,7 +6,6 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
     "check": "biome check . --no-errors-on-unmatched",
     "check:fix": "biome check . --write",
     "test": "vitest run",
