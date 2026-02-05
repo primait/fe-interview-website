@@ -1,6 +1,6 @@
 .header {
   font-size: var(--font-size-l);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-medium);
   height: var(--header-height);
   padding: 0 1.25rem;
   display: flex;
