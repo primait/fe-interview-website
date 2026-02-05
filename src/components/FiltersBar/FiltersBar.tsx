@@ -1,4 +1,5 @@
 import { type HTMLAttributes, type ReactNode, useId } from "react";
+import { classNames } from "@/utils/utils";
 import styles from "./FiltersBar.module.css";
 
 /**
@@ -13,27 +14,17 @@ export interface FiltersBarProps extends HTMLAttributes<HTMLDivElement> {
    * Filter items (badges as filter) to display
    */
   children: ReactNode;
-  /**
-   * Optional description for additional context
-   */
-  description?: string;
 }
 
 /**
  * Accessible container for a group of filter items.
  * Provides proper semantic structure and ARIA attributes for screen readers.
  */
-export const FiltersBar = ({
-  label,
-  children,
-  description,
-  className = "",
-  ...props
-}: FiltersBarProps) => {
+export const FiltersBar = ({ label, children, className = "", ...props }: FiltersBarProps) => {
   const id = useId();
 
   return (
-    <div className={`${styles["filters-bar"]} ${className}`} {...props}>
+    <div className={classNames(styles["filters-bar"], className)} {...props}>
       <div id={id} className={styles["filters-bar__label"]}>
         {label}
       </div>

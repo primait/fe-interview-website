@@ -16,18 +16,6 @@ export default function NotFound() {
       <p style={{ fontSize: "1.2rem", marginBottom: "2rem" }}>
         The page you are looking for does not exist.
       </p>
-      <a
-        href="/"
-        style={{
-          padding: "0.75rem 1.5rem",
-          backgroundColor: "#0070f3",
-          color: "white",
-          borderRadius: "0.5rem",
-          textDecoration: "none",
-        }}
-      >
-        Go Home
-      </a>
     </div>
   );
 }

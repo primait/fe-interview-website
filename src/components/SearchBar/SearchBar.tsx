@@ -1,6 +1,7 @@
 "use client";
 
 import { type FormEvent, type KeyboardEvent, useId } from "react";
+import { classNames } from "@/utils/utils";
 import { Button } from "../Button/Button";
 import styles from "./SearchBar.module.css";
 
@@ -33,6 +34,10 @@ export interface SearchBarProps {
    * Disables the search bar
    */
   disabled?: boolean;
+  /**
+   * Optional additional class name for custom styling
+   */
+  className?: string;
 }
 
 /**
@@ -46,6 +51,7 @@ export const SearchBar = ({
   label = "Search field",
   buttonLabel = "Search",
   disabled = false,
+  className,
 }: SearchBarProps) => {
   const id = useId();
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
@@ -61,7 +67,7 @@ export const SearchBar = ({
   };
 
   return (
-    <search className={"search-bar"}>
+    <search className={classNames(styles["search-bar"], className)}>
       <form onSubmit={handleSubmit} className={styles["search-bar__form"]}>
         <label className={"sr-only"} htmlFor={id}>
           {label}

@@ -1,3 +1,7 @@
+.search-bar {
+  width: 100%;
+}
+
 .search-bar__form {
   display: flex;
   gap: var(--spacing-s);
