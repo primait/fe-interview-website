@@ -48,7 +48,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ```
 src/
-├── app/                 # Next.js App Router
+├── app/                # Next.js App Router
 │   ├── layout.tsx      # Root layout
 │   ├── page.tsx        # Home page
 │   ├── not-found.tsx   # 404 page
