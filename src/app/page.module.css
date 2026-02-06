@@ -1,0 +1,11 @@
+.home {
+  padding-top: 21.5rem;
+  @media (min-width: 768px) {
+    padding-top: 25rem;
+  }
+}
+
+.home__search-bar {
+  max-width: 37.5rem;
+  margin: 0 auto;
+}

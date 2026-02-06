@@ -1,0 +1,16 @@
+.header {
+  font-size: var(--font-size-l);
+  font-weight: var(--font-weight-medium);
+  height: var(--header-height);
+  padding: 0 1.25rem;
+  display: flex;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    padding: 0 10rem;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 0 15rem;
+  }
+}

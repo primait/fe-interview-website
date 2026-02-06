@@ -1,0 +1,22 @@
+.filters-bar {
+  display: flex;
+  gap: var(--spacing-m);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.filters-bar__label {
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-normal);
+}
+
+.filters-bar__filters {
+  display: flex;
+  gap: var(--spacing-m);
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    overflow-x: auto;
+    gap: var(--spacing-s);
+  }
+}
